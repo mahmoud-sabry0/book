@@ -1,0 +1,97 @@
+nav 
+{
+    z-index: 999;
+}
+.nav-item p
+{
+    cursor: pointer;
+}
+.icons i 
+{
+    cursor: pointer;
+    color: #0d6efd;
+    transition: .3s;
+}
+.icons i:hover{
+    color: rgb(26, 26, 26);
+} 
+.icons-item i 
+{
+    cursor: pointer;
+    color: #eeeff0;
+    transition: .3s;
+}
+.icons-item i:hover
+{
+    color: rgb(26, 26, 26);
+} 
+aside
+{
+  top: 75px;
+  left: -160px;
+  width: 160px;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  transition: .5s;
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, .5);    */
+}
+.open-setting
+{
+    left: 0;
+    transition: .5s;
+}
+.setting
+{
+    position: absolute;
+    top: 50px;
+    cursor: pointer;
+    right: -41px;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    color: #0d6efd;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .5); */
+    /* border-right-color: black; */
+    border-top: 3px solid #0d6efd;
+    border-right: 3px solid #0d6efd;
+    border-bottom: 3px solid #0d6efd;
+}
+.Create_Product
+{
+    cursor: pointer;
+    background-color: #0d6efd;
+    border: 3px solid #0d6efd;
+    transition: .3s;
+}
+
+.Create_Product:hover
+{
+    background-color: transparent;
+    color: #0d6efd;
+}
+
+
+#product-form
+{
+  background:linear-gradient(#00000096,#00000096), url("../imgs/Free\ Photo\ _\ Book\ in\ library\ with\ open\ textbook.jpg");
+  background-size: cover; 
+  display: none;
+  z-index: 9999;
+  overflow-y: auto;
+
+}
+#close-form
+{
+    cursor: pointer;
+    transition: .3s;
+    color: #0d6efd;
+}
+#close-form:hover
+{
+    color: #eeeff0; 
+}
+
+#Edit,
+#Delete
+{
+    cursor: pointer;
+}
