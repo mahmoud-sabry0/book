@@ -1,130 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet" />
- <link
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.2/font/bootstrap-icons.min.css"
     />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-  
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <p class="navbar-brand">
-        <i class="fa-solid fa-book-open-reader fs-2 text-dark"></i>
-        <span class="fw-bold fs-5 text-dark">Abdelaziz library</span>
-      </p>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <p class="nav-link active" id="home">Home</p>
-          </li>
-          <li class="nav-item">
-            <p class="nav-link" id="about">Link</p>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search by name" id="search">
-        </form>
-         
-      </div>
-    </div>
-  </nav>
-  <!-- ******************************** -->
-  <div class="container text-center my-3">
-    <div id="welcomeMessage" class="badge bg-primary fs-4 mb-4"></div>
-  </div>
-  <div id="content-page">
-    
-  </div>
-
-
-
-  <aside class="position-fixed h-100 text-center">
-   <p class="badge fs-6 rounded-0 rounded-end setting p-2"><i class="fa-solid fa-gear fa-xl"></i></p>
-   <p class="badge bg-danger mt-2 fs-6">Admin</p>
-   <div class="user-info">
-    <div class="user-photo">
-      <img src="./userimg.jpg" class="w-100" alt="">
-    </div>
-    <p class="badge bg-primary mt-2 fs-6">user name</p>
-   </div>
-   <p class="badge mt-2 fs-6 Create_Product">CRUD Product</p>
-   <div class="d-flex justify-content-around icons">
-    <div class="mx-3">
-        <i class="fa-solid fa-cart-shopping fs-4" id="cart"></i>
-      </div>
-      <div class="mx-3">
-        <i class="fa-solid fa-heart fs-4" id="favourite"></i>
-      </div>
-  </div>
-  </aside>
-
-  <section id="product-form" class="position-fixed top-0 bottom-0 start-0 end-0">
-    <i class="fa-solid fa-rectangle-xmark position-absolute top-0 start-0 mt-3 ms-3 fs-1" id="close-form"></i>
-    <div class="container">
-        <div id="create-product-form" class="position-absolute w-75 top-0 start-50 translate-middle-x mt-5" id="form">
-            <div class="mb-3">
-                <input type="text" class="form-control" id="bookName" placeholder="Enter the name of book">
-              </div>
-            <div class="mb-3">
-              <input type="number" class="form-control" id="bookPrice" placeholder="Enter the price of book">
-            </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="book-description" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Book description</label>
-              </div>
-            <button type="submit" class="btn mt-3" id="cu"></button>
-            <input class="form-control mt-2" type="search" placeholder="Search by name" id="searchList">
+    <link rel="shortcut icon" href="./download.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-dark">
+    <!-- jnkmpl, -->
+    <div class="">
+      <div
+        class="side-nav-menu min-vh-100 position-fixed d-flex top-0"
+        style="left: 0px"
+      >
+        <div class="nav-tab flex-column justify-content-between min-vh-100">
+          <div class="links p-4">
+            <ul class="list-unstyled overflow-hidden">
+              <li
+                onclick="showSearchInputs(); "
+                class="py-2 position-relative cursor-pointer"
+                style="top: 0px"
+              >
+                Search
+              </li>
+              <li
+                onclick="getCategories()"
+                class="py-2 position-relative cursor-pointer"
+                style="top: 0px"
+              >
+                Categories
+              </li>
+              <li
+                onclick="getArea(); "
+                class="py-2 position-relative cursor-pointer"
+                style="top: 0px"
+              >
+                Area
+              </li>
+              <li
+                onclick="getIngredients(); "
+                class="py-2 position-relative cursor-pointer"
+                style="top: 0px"
+              >
+                Ingredients
+              </li>
+              <li
+                onclick="showContacts(); "
+                class="py-2 position-relative cursor-pointer"
+                style="top: 0px"
+              >
+                Contact Us
+              </li>
+            </ul>
           </div>
-          
-         <div class="container">
-          <table class="table-responsive table-dark table-active position-absolute w-75 start-50 translate-middle-x top-50 text-center bg-dark">
-            <thead class="text-info">
-              <tr>
-                <th>ID</th>
-                <th>Book Name</th>
-                <th>Book Price</th>
-                <th>Book Description</th>
-                <th>Edit</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody id="tbody">
-              
-            </tbody>
-          </table>
-         </div>
-    </div>
-</section>
-  
-  
+          <div class="nav-footer p-4">
+            <div class="icons facebook cursor-pointer">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-twitter"></i>
+              <i class="bi bi-globe"></i>
+            </div>
+            <div class="footer">
+              <p>Copyright Â© 2019 All Rights <br />Reserved.</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black"
+        >
+          <img class="logo" src="./download.jpg" alt="" srcset="" />
+          <i id="icon" class="bi bi-arrow-right-square-fill font-size:30px"></i>
+          <div class="globe">
+            <i class="bi bi-globe"></i>
+            <i class="bi bi-share-fill"></i>
+          </div>
+        </div>
+      </div>
 
+      
 
+      <!-- ptn -->
+      <div class="container w-75 " id="searchContainer">
+        <div class="row py-4 d-flex" id="searh">
+          <div class="col-md-6">
+            <input
+              class="form-control bg-transparent text-white"
+              type="text"
+              placeholder="Search By Name"
+              id="seach-by-name"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              class="form-control bg-transparent text-white"
+              type="text"
+              placeholder="Search By First Letter"
+            />
+          </div>
+        </div>
+      </div>
 
-
-
+      <div class="contaner">
+        <div class="row" id="meals"></div>
+      </div>
+      <div class="relod">
+        <div class="loader" id="lod"></div>
+      </div>
+      <!-- ///////////// -->
     
-  
-  <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-  crossorigin="anonymous"
-></script>
-<script src="script.js"></script>
-</body>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
